@@ -154,13 +154,13 @@ describe('gulp-inline-svg', () => {
 
     beforeEach((done) => {
       gulp.src(fixtures('non-closing-img-tag.html'))
-      .pipe(inlineSvg({
-        root: './test/fixtures/svg-root'
-      }))
-      .pipe(through.obj((file) => {
-        output = file.contents.toString();
-        done();
-      }));
+        .pipe(inlineSvg({
+          root: './test/fixtures/svg-root'
+        }))
+        .pipe(through.obj((file) => {
+          output = file.contents.toString();
+          done();
+        }));
     });
 
     it('embeds the svg', () => {
@@ -181,13 +181,13 @@ describe('gulp-inline-svg', () => {
 
     beforeEach((done) => {
       gulp.src(fixtures('self-closing-img-tag.html'))
-      .pipe(inlineSvg({
-        root: './test/fixtures/svg-root'
-      }))
-      .pipe(through.obj((file) => {
-        output = file.contents.toString();
-        done();
-      }));
+        .pipe(inlineSvg({
+          root: './test/fixtures/svg-root'
+        }))
+        .pipe(through.obj((file) => {
+          output = file.contents.toString();
+          done();
+        }));
     });
 
     it('embeds the svg', () => {
